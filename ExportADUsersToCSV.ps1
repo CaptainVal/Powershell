@@ -1,0 +1,1 @@
+Get-ADUser -Filter * -SearchBase "OU=Employee_HO,OU=Users,OU=Clintons Retail,DC=CLINRET,DC=local" -Properties * | Select-Object -Property GivenName,Surname,Description,samaccountname,enabled, EmailAddress | export-csv -path C:\temp\userexport.csv
